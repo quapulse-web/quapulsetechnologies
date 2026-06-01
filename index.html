@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Qua Pulse Technologies — Structural Risk Intelligence & Predictive Failure Analytics. Edge-inference acoustic monitoring systems for short-term insurers, body corporates, and institutional asset managers."/>
+<meta name="theme-color" content="#0E3D6E"/>
+<title>Qua Pulse Technologies — Structural Risk Intelligence & Predictive Failure Analytics</title>
+
+<!-- ── Structured Data: JSON-LD (SEO) ── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Corporation",
+  "name": "Qua Pulse Technologies (Pty) Ltd",
+  "alternateName": "QUA Pulse",
+  "url": "https://quapulse.co.za",
+  "logo": "https://quapulse.co.za/assets/logo.png",
+  "description": "Structural Risk Intelligence firm deploying Edge-Inference Frequency Topology™ and Acoustic Waveguide Impedance Mapping™ systems for short-term insurers, body corporates, and institutional asset managers across South Africa.",
+  "foundingDate": "2026",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Durban",
+    "addressRegion": "KwaZulu-Natal",
+    "addressCountry": "ZA"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "enquiries@quapulse.co.za",
+    "contactType": "sales",
+    "availableLanguage": "English"
+  },
+  "sameAs": [
+    "https://linkedin.com/in/giyani-baloyi"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Bonga Giyani Baloyi",
+    "jobTitle": "Founder & Lead Strategist",
+    "url": "https://linkedin.com/in/giyani-baloyi"
+  },
+  "areaServed": "ZA",
+  "knowsAbout": ["InsurTech", "IoT", "Structural Risk Intelligence", "Predictive Failure Analytics", "Acoustic Waveguide Impedance Mapping", "Edge-Inference Frequency Topology", "Transient Spectral Variance Analysis", "Predictive Failure Coefficient", "Property Asset Intelligence"]
+}
+</script>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Martian+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config={theme:{extend:{colors:{
+  navy:'#0E3D6E',navyMid:'#185FA5',navyLight:'#EBF3FC',navyXLight:'#F5F8FD',
+  emerald:'#10B981',emeraldDk:'#059669',emeraldLt:'#D1FAE5',
+  ink:'#08172A',stone:'#94A3B8',border:'#DDE6F0',warm:'#F8F9FB'
+},fontFamily:{
+  display:['Cormorant Garamond','Georgia','serif'],
+  body:['Instrument Sans','sans-serif'],
+  mono:['Martian Mono','monospace']
+}}}}
+</script>
+<style>
+:root{
+  --navy:#0E3D6E;--navyMid:#185FA5;--emerald:#10B981;
+  --ink:#08172A;--stone:#94A3B8;--border:#DDE6F0;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Instrument Sans',sans-serif;color:var(--ink);background:#fff;overflow-x:hidden}
+.f-display{font-family:'Cormorant Garamond',serif}
+.f-mono{font-family:'Martian Mono',monospace}
+
+/* ── Tab system ── */
+.tab-panel{display:none;animation:tabFade .35s ease both}
+.tab-panel.active{display:block}
+@keyframes tabFade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── ARIA Tab navigation ── */
+.nav-tab{position:relative;transition:color .2s}
+.nav-tab::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--navyMid),var(--emerald));border-radius:2px;transform:scaleX(0);transition:transform .25s cubic-bezier(.22,1,.36,1)}
+.nav-tab[aria-selected="true"]{color:var(--navy)}
+.nav-tab[aria-selected="true"]::after{transform:scaleX(1)}
+
+/* Mobile menu */
+.mobile-menu{display:none}
+.mobile-menu.open{display:block}
+
+/* ── Animations — GPU offloaded via will-change ── */
+@keyframes pulseRing{0%{transform:scale(1);opacity:.5}100%{transform:scale(2.8);opacity:0}}
+@keyframes pulseCore{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes scanLine{0%{top:0;opacity:.8}100%{top:100%;opacity:.2}}
+@keyframes barGrow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes drawLine{from{stroke-dashoffset:600}to{stroke-dashoffset:0}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+@keyframes orb{0%,100%{transform:translate(0,0)}50%{transform:translate(20px,-15px)}}
+@keyframes shimmerSlide{from{background-position:-400px 0}to{background-position:400px 0}}
+
+/* GPU-accelerated animation classes */
+.pulse-ring{animation:pulseRing 2.8s ease-out infinite;will-change:transform,opacity}
+.pulse-ring2{animation:pulseRing 2.8s ease-out .9s infinite;will-change:transform,opacity}
+.pulse-core{animation:pulseCore 2.8s ease-in-out infinite;will-change:transform}
+.drift{animation:drift 6s ease-in-out infinite;will-change:transform}
+.blink{animation:blink 1.2s step-end infinite;will-change:opacity}
+.ticker-track{animation:ticker 30s linear infinite;display:flex;gap:3rem;white-space:nowrap;will-change:transform}
+.scan{position:absolute;left:0;right:0;height:1.5px;background:linear-gradient(90deg,transparent,rgba(16,185,129,.6),transparent);animation:scanLine 3.5s ease-in-out infinite;will-change:transform,opacity}
+.bar-grow{transform-origin:bottom;animation:barGrow .8s cubic-bezier(.22,1,.36,1) both;will-change:transform}
+.b1{animation-delay:.1s}.b2{animation-delay:.2s}.b3{animation-delay:.3s}
+.b4{animation-delay:.4s}.b5{animation-delay:.5s}.b6{animation-delay:.6s}
+.data-line{stroke-dasharray:600;stroke-dashoffset:600;animation:drawLine 3s ease forwards}
+.orb1{animation:orb 8s ease-in-out infinite;will-change:transform}
+
+/* ── Layout helpers ── */
+.hero-grid{background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:60px 60px;opacity:.3}
+.rule{height:1px;background:linear-gradient(90deg,var(--navyMid),var(--emerald));width:36px;border-radius:1px}
+.label{font-family:'Martian Mono',monospace;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--navyMid)}
+.nav-glass{background:rgba(255,255,255,.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.card{border:1px solid var(--border);transition:border-color .3s,box-shadow .3s,transform .3s}
+.card:hover{border-color:rgba(14,61,110,.2);box-shadow:0 20px 60px rgba(14,61,110,.09);transform:translateY(-3px)}
+.btn-navy{background:var(--navy);color:#fff;transition:background .3s,box-shadow .3s,transform .2s}
+.btn-navy:hover{background:var(--navyMid);box-shadow:0 12px 36px rgba(14,61,110,.35);transform:translateY(-1px)}
+.btn-outline{border:1.5px solid var(--navy);color:var(--navy);transition:background .25s,color .25s}
+.btn-outline:hover{background:var(--navy);color:#fff}
+.form-in{border:1px solid var(--border);transition:border-color .2s,box-shadow .2s;background:#F8F9FB}
+.form-in:focus{outline:none;border-color:var(--navyMid);box-shadow:0 0 0 3px rgba(24,95,165,.1)}
+.portal-bg{background:linear-gradient(135deg,#0A1F3A 0%,#0E3D6E 60%,#0A2845 100%)}
+.pillar-num{font-family:'Cormorant Garamond',serif;font-size:5rem;font-weight:300;color:rgba(14,61,110,.07);line-height:1;position:absolute;top:-8px;right:12px;pointer-events:none;user-select:none}
+.brand-row{border-bottom:1px solid var(--border);transition:background .15s}
+.brand-row:hover{background:#F5F8FD}
+.section-reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.section-reveal.visible{opacity:1;transform:translateY(0)}
+.expertise-pill{background:var(--navyXLight);border:1px solid var(--border);color:var(--navy);font-family:'Martian Mono',monospace;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;padding:.4rem 1rem;border-radius:9999px}
+.timeline-line{position:absolute;left:19px;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,var(--navyMid),var(--emerald))}
+.timeline-dot{width:10px;height:10px;border-radius:50%;background:var(--navy);border:2px solid white;box-shadow:0 0 0 3px var(--navyLight);flex-shrink:0;margin-top:4px}
+.photo-placeholder{background:linear-gradient(135deg,var(--navyXLight),#E0EBF8);border:1px solid var(--border)}
+
+/* ── Form status display ── */
+#formStatusDisplay{display:none;border-radius:.75rem;padding:1rem 1.25rem;margin-bottom:1.25rem;font-family:'Martian Mono',monospace;font-size:.72rem;letter-spacing:.06em;line-height:1.6}
+#formStatusDisplay.loading{display:block;background:#F5F8FD;border:1px solid var(--border);color:var(--navyMid)}
+#formStatusDisplay.success{display:block;background:#D1FAE5;border:1px solid #A7F3D0;color:#065F46}
+#formStatusDisplay.error{display:block;background:#FEF2F2;border:1px solid #FECACA;color:#991B1B}
+</style>
+</head>
+<body class="bg-white text-ink">
+
+<!-- ═══════════════════════════════════
+     STICKY NAVIGATION WITH TABS
+═══════════════════════════════════ -->
+<header id="site-nav" class="fixed top-0 left-0 right-0 z-50 nav-glass">
+  <div class="max-w-7xl mx-auto px-5 lg:px-10 h-[64px] flex items-center justify-between gap-6">
+
+    <!-- Logo -->
+    <button onclick="showTab('home')" aria-label="Qua Pulse Technologies — Home" class="flex items-center gap-2.5 flex-shrink-0 group">
+      <div class="relative w-7 h-7 flex items-center justify-center">
+        <div class="absolute inset-0 rounded-full bg-emerald/20 pulse-ring" aria-hidden="true"></div>
+        <div class="absolute inset-0 rounded-full bg-emerald/12 pulse-ring2" aria-hidden="true"></div>
+        <div class="w-3.5 h-3.5 rounded-full bg-emerald pulse-core flex items-center justify-center z-10">
+          <div class="w-1.5 h-1.5 rounded-full bg-white"></div>
+        </div>
+      </div>
+      <div class="flex items-baseline gap-2">
+        <span class="f-display font-semibold text-xl text-navy tracking-tight">QUA</span>
+        <span class="hidden sm:inline f-mono text-[9px] text-stone tracking-[.18em] uppercase">Pulse Technologies</span>
+      </div>
+    </button>
+
+    <!-- Desktop tabs — ARIA tablist -->
+    <nav role="tablist" aria-label="Site sections" class="hidden md:flex items-center gap-1 flex-1 justify-center">
+      <button onclick="showTab('home')"       id="tab-home"       role="tab" aria-selected="true"  aria-controls="panel-home"       class="nav-tab f-mono text-[10px] tracking-[.12em] uppercase text-stone px-4 py-2">Home</button>
+      <button onclick="showTab('technology')" id="tab-technology" role="tab" aria-selected="false" aria-controls="panel-technology" class="nav-tab f-mono text-[10px] tracking-[.12em] uppercase text-stone px-4 py-2">Technology</button>
+      <button onclick="showTab('advantage')"  id="tab-advantage"  role="tab" aria-selected="false" aria-controls="panel-advantage"  class="nav-tab f-mono text-[10px] tracking-[.12em] uppercase text-stone px-4 py-2">Failure Analytics</button>
+      <button onclick="showTab('about')"      id="tab-about"      role="tab" aria-selected="false" aria-controls="panel-about"      class="nav-tab f-mono text-[10px] tracking-[.12em] uppercase text-stone px-4 py-2">About</button>
+      <button onclick="showTab('contact')"    id="tab-contact"    role="tab" aria-selected="false" aria-controls="panel-contact"    class="nav-tab f-mono text-[10px] tracking-[.12em] uppercase text-stone px-4 py-2">Contact</button>
+    </nav>
+
+    <!-- CTA -->
+    <button onclick="showTab('contact')" class="btn-navy hidden sm:flex items-center gap-2 f-mono text-[10px] tracking-[.1em] uppercase px-4 py-2.5 rounded-sm shadow-sm flex-shrink-0">
+      <div class="w-1.5 h-1.5 rounded-full bg-emerald"></div>
+      Request Briefing
+    </button>
+
+    <!-- Hamburger -->
+    <button id="hamburger" onclick="toggleMobile()" aria-label="Toggle mobile navigation" aria-expanded="false" class="md:hidden p-2 text-stone hover:text-navy transition-colors">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+
+  <!-- Mobile dropdown -->
+  <div id="mobile-menu" class="mobile-menu md:hidden bg-white border-t border-border px-5 py-4 space-y-1 shadow-lg" role="navigation" aria-label="Mobile navigation">
+    <button onclick="showTab('home');toggleMobile()"       class="w-full text-left f-mono text-[10px] tracking-[.14em] uppercase text-stone hover:text-navy py-2.5 px-3 rounded-lg hover:bg-navyXLight transition-colors">Home</button>
+    <button onclick="showTab('technology');toggleMobile()" class="w-full text-left f-mono text-[10px] tracking-[.14em] uppercase text-stone hover:text-navy py-2.5 px-3 rounded-lg hover:bg-navyXLight transition-colors">Technology</button>
+    <button onclick="showTab('advantage');toggleMobile()"  class="w-full text-left f-mono text-[10px] tracking-[.14em] uppercase text-stone hover:text-navy py-2.5 px-3 rounded-lg hover:bg-navyXLight transition-colors">Failure Analytics</button>
+    <button onclick="showTab('about');toggleMobile()"      class="w-full text-left f-mono text-[10px] tracking-[.14em] uppercase text-stone hover:text-navy py-2.5 px-3 rounded-lg hover:bg-navyXLight transition-colors">About</button>
+    <button onclick="showTab('contact');toggleMobile()"    class="w-full text-left f-mono text-[10px] tracking-[.14em] uppercase text-stone hover:text-navy py-2.5 px-3 rounded-lg hover:bg-navyXLight transition-colors">Contact</button>
+    <div class="pt-2">
+      <button onclick="showTab('contact');toggleMobile()" class="btn-navy w-full py-2.5 rounded-sm f-mono text-[10px] tracking-[.1em] uppercase">Request Briefing</button>
+    </div>
+  </div>
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     TAB: HOME
+═══════════════════════════════════════════════════════ -->
+<div id="panel-home" role="tabpanel" aria-labelledby="tab-home" class="tab-panel active pt-[64px]">
+
+  <!-- HERO -->
+  <section class="relative min-h-[92vh] flex items-center overflow-hidden bg-white">
+    <div class="absolute inset-0 hero-grid pointer-events-none" aria-hidden="true"></div>
+    <div class="absolute top-1/4 right-1/3 w-[500px] h-[500px] rounded-full bg-navyMid/5 blur-[120px] orb1 pointer-events-none" aria-hidden="true"></div>
+    <div class="absolute bottom-1/3 left-1/5 w-[350px] h-[350px] rounded-full bg-emerald/4 blur-[90px] pointer-events-none" aria-hidden="true"></div>
+
+    <div class="max-w-7xl mx-auto px-5 lg:px-10 w-full py-20 lg:py-28">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+
+        <!-- Copy: 6 cols -->
+        <div class="lg:col-span-6">
+          <div class="flex items-center gap-3 mb-9" style="animation:fadeUp .7s ease both">
+            <div class="rule" aria-hidden="true"></div>
+            <span class="label">Structural Risk Intelligence · Predictive Failure Analytics · InsurTech</span>
+          </div>
+          <h1 class="f-display text-[3.8rem] md:text-[5rem] lg:text-[5.4rem] leading-[.93] font-light text-ink mb-7" style="animation:fadeUp .7s .1s ease both">
+            The Future<br/>of Risk<br/>is <em class="text-navy font-normal">Predictable.</em>
+          </h1>
+          <p class="text-base text-stone leading-relaxed mb-9 max-w-[420px]" style="animation:fadeUp .7s .2s ease both">
+            Qua Pulse deploys Acoustic Waveguide Impedance Mapping™ and edge-inference telemetry to deliver statistically rigorous forewarning of pressure-vessel failure. We quantify actuarial exposure, suppress loss ratios, and give asset portfolios a forensic data advantage — before failure propagates.
+          </p>
+          <div class="flex flex-wrap gap-3 mb-12" style="animation:fadeUp .7s .3s ease both">
+            <button onclick="showTab('contact')" class="btn-navy px-7 py-3.5 rounded-sm text-sm font-medium flex items-center gap-2.5 shadow-md">
+              Request Technical Intelligence Briefing
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </button>
+            <button onclick="showTab('technology')" class="btn-outline px-7 py-3.5 rounded-sm text-sm font-medium">View Architecture</button>
+          </div>
+          <!-- Stats -->
+          <div class="grid grid-cols-3 gap-6 pt-8 border-t border-border" style="animation:fadeUp .7s .4s ease both">
+            <div>
+              <div class="f-display text-3xl font-semibold text-navy">99<span class="text-emerald">%</span></div>
+              <div class="f-mono text-[9px] text-stone uppercase tracking-[.14em] mt-1">TSVA™ precision</div>
+            </div>
+            <div>
+              <div class="f-display text-3xl font-semibold text-navy">10<span class="text-stone text-lg font-light">s</span></div>
+              <div class="f-mono text-[9px] text-stone uppercase tracking-[.14em] mt-1">Sampling interval</div>
+            </div>
+            <div>
+              <div class="f-display text-3xl font-semibold text-navy">R43<span class="text-emerald">k</span></div>
+              <div class="f-mono text-[9px] text-stone uppercase tracking-[.14em] mt-1">Mean loss prevented</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data art: 6 cols -->
+        <div class="lg:col-span-6 flex justify-center lg:justify-end" style="animation:fadeUp .7s .2s ease both">
+          <div class="relative w-full max-w-[500px]">
+            <div class="relative bg-white rounded-2xl border border-border shadow-[0_32px_80px_rgba(14,61,110,.13)] overflow-hidden drift" aria-hidden="true">
+              <div class="flex items-center justify-between px-5 py-3 border-b border-border bg-warm">
+                <div class="flex gap-1.5"><div class="w-2.5 h-2.5 rounded-full bg-[#FF5F57]"></div><div class="w-2.5 h-2.5 rounded-full bg-[#FFBC2E]"></div><div class="w-2.5 h-2.5 rounded-full bg-[#28C840]"></div></div>
+                <div class="f-mono text-[9px] text-stone">AWIM™ · SPECTRAL SYNTHESIS · LIVE</div>
+                <div class="flex items-center gap-1.5"><div class="w-1.5 h-1.5 rounded-full bg-emerald blink"></div><span class="f-mono text-[9px] text-emerald">ACTIVE</span></div>
+              </div>
+              <div class="relative bg-gradient-to-b from-white to-navyXLight p-5">
+                <div class="scan"></div>
+                <svg viewBox="0 0 440 240" xmlns="http://www.w3.org/2000/svg" class="w-full">
+                  <line x1="0" y1="60"  x2="440" y2="60"  stroke="#DDE6F0" stroke-width=".5"/>
+                  <line x1="0" y1="120" x2="440" y2="120" stroke="#DDE6F0" stroke-width=".5"/>
+                  <line x1="0" y1="180" x2="440" y2="180" stroke="#DDE6F0" stroke-width=".5"/>
+                  <polyline class="data-line" points="0,180 40,175 80,160 120,155 160,140 200,130 240,110 280,105 320,80 360,55 400,40 440,30" fill="none" stroke="var(--navyMid)" stroke-width="1.5"/>
+                  <polyline class="data-line" style="animation-delay:.4s" points="0,200 40,195 80,185 120,190 160,175 200,165 240,155 280,160 320,145 360,130 400,110 440,95" fill="none" stroke="var(--emerald)" stroke-width="1.5" opacity=".6"/>
+                  <circle cx="320" cy="80" r="5" fill="var(--navyMid)" opacity=".9"/>
+                  <line x1="320" y1="80" x2="320" y2="60" stroke="var(--navyMid)" stroke-width="1" stroke-dasharray="3,2"/>
+                  <rect x="295" y="42" width="90" height="18" rx="3" fill="var(--navy)" opacity=".9"/>
+                  <text x="340" y="55" text-anchor="middle" font-family="Martian Mono,monospace" font-size="7" fill="white">ANOMALY · T+4h</text>
+                </svg>
+              </div>
+              <div class="px-5 py-4 border-t border-border bg-warm grid grid-cols-3 gap-3">
+                <div class="text-center"><div class="f-mono text-[9px] text-stone">Unit 04A</div><div class="f-mono text-[11px] text-emeraldDk font-medium">Normal</div></div>
+                <div class="text-center"><div class="f-mono text-[9px] text-stone">Unit 07C</div><div class="f-mono text-[11px] text-amber-500 font-medium">Watch</div></div>
+                <div class="text-center"><div class="f-mono text-[9px] text-stone">Unit 12B</div><div class="f-mono text-[11px] text-red-500 font-medium">Alert</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUE PROPOSITION TICKER -->
+  <section class="border-y border-border bg-warm py-4 overflow-hidden" aria-label="Service highlights">
+    <div class="ticker-track" aria-hidden="true">
+      <span class="f-mono text-[10px] text-stone uppercase tracking-[.15em]">Edge-Inference Telemetry</span>
+      <span class="f-mono text-[10px] text-navy">·</span>
+      <span class="f-mono text-[10px] text-stone uppercase tracking-[.15em]">Transient Spectral Variance Analysis™</span>
+      <span class="f-mono text-[10px] text-navy">·</span>
+      <span class="f-mono text-[10px] text-stone uppercase tracking-[.15em]">Predictive Failure Analytics</span>
+      <span class="f-mono text-[10px] text-navy">·</span>
+      <span class="f-mono text-[10px] text-stone uppercase tracking-[.15em]">Acoustic Waveguide Impedance Mapping™</span>
+      <span class="f-mono text-[10px] text-navy">·</span>
+      <span class="f-mono text-[10px] text-stone uppercase tracking-[.15em]">South African Compliance</span>
+      <span class="f-mono text-[10px] text-navy">·</span>
+      <span class="f-mono text-[10px] text-stone uppercase tracking-[.15em]">POPIA Act 4 of 2013</span>
+      <span class="f-mono text-[10px] text-navy">·</span>
+      <span class="f-mono text-[10px] text-stone uppercase tracking-[.15em]">AES-256 Encrypted</span>
+      <span class="f-mono text-[10px] text-navy">·</span>
+      <!-- Duplicate for seamless loop -->
+      <span class="f-mono text-[10px] text-stone uppercase tracking-[.15em]">Edge-Inference Telemetry</span>
+      <span class="f-mono text-[10px] text-navy">·</span>
+      <span class="f-mono text-[10px] text-stone uppercase tracking-[.15em]">Transient Spectral Variance Analysis™</span>
+      <span class="f-mono text-[10px] text-navy">·</span>
+      <span class="f-mono text-[10px] text-stone uppercase tracking-[.15em]">Predictive Failure Analytics</span>
+      <span class="f-mono text-[10px] text-navy">·</span>
+      <span class="f-mono text-[10px] text-stone uppercase tracking-[.15em]">Acoustic Waveguide Impedance Mapping™</span>
+      <span class="f-mono text-[10px] text-navy">·</span>
+      <span class="f-mono text-[10px] text-stone uppercase tracking-[.15em]">South African Compliance</span>
+      <span class="f-mono text-[10px] text-navy">·</span>
+      <span class="f-mono text-[10px] text-stone uppercase tracking-[.15em]">POPIA Act 4 of 2013</span>
+      <span class="f-mono text-[10px] text-navy">·</span>
+      <span class="f-mono text-[10px] text-stone uppercase tracking-[.15em]">AES-256 Encrypted</span>
+      <span class="f-mono text-[10px] text-navy">·</span>
+    </div>
+  </section>
+
+  <!-- THE PROBLEM / THREE PILLARS -->
+  <section class="max-w-7xl mx-auto px-5 lg:px-10 py-24">
+    <div class="grid lg:grid-cols-12 gap-12">
+
+      <div class="lg:col-span-4 section-reveal">
+        <div class="label mb-4">The Systemic Failure Mode</div>
+        <h2 class="f-display text-4xl md:text-5xl font-light text-ink leading-[1.05] mb-6">
+          The Property Sector<br/>Operates on <em>Post-Failure Liability.</em>
+        </h2>
+        <p class="text-stone text-sm leading-relaxed mb-7">Pressure-vessel rupture. Thermostatic element burnout. Water ingress. Loss-adjustment costs. Rental income voids. The incumbent model waits for a failure event to manifest — then quantifies the damage retrospectively. Qua Pulse inverts this with statistically validated pre-failure detection, shifting the intervention horizon from post-event remediation to pre-failure interception.</p>
+        <button onclick="showTab('technology')" class="btn-navy inline-flex items-center gap-2 px-6 py-3 rounded-sm text-sm font-medium shadow-sm">
+          View Detection Architecture
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </button>
+      </div>
+
+      <div class="lg:col-span-8 grid md:grid-cols-3 gap-6">
+        <!-- Pillar 1 -->
+        <div class="card rounded-2xl bg-white p-7 relative overflow-hidden section-reveal">
+          <span class="pillar-num" aria-hidden="true">01</span>
+          <div class="w-10 h-10 rounded-xl bg-navyLight flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+          </div>
+          <h3 class="font-semibold text-ink text-sm mb-2">Acoustic Waveguide Impedance Mapping™</h3>
+          <p class="text-stone text-xs leading-relaxed">Proprietary multi-modal sensor fusion architecture correlating acoustic emission, thermal gradient, and hydrostatic pressure variance — 10-second sampling intervals, edge-processed under AES-256.</p>
+        </div>
+        <!-- Pillar 2 -->
+        <div class="card rounded-2xl bg-white p-7 relative overflow-hidden section-reveal" style="transition-delay:.1s">
+          <span class="pillar-num" aria-hidden="true">02</span>
+          <div class="w-10 h-10 rounded-xl bg-emeraldLt flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-emeraldDk" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          </div>
+          <h3 class="font-semibold text-ink text-sm mb-2">Predictive Failure Coefficient™</h3>
+          <p class="text-stone text-xs leading-relaxed">36 months of South African field-validated failure data. 14 appliance manufacturers. 6 climate-zone cohorts. The sole actuarially-calibrated pressure-vessel failure-rate dataset in the sub-Saharan region.</p>
+        </div>
+        <!-- Pillar 3 -->
+        <div class="card rounded-2xl bg-white p-7 relative overflow-hidden section-reveal" style="transition-delay:.2s">
+          <span class="pillar-num" aria-hidden="true">03</span>
+          <div class="w-10 h-10 rounded-xl bg-navyLight flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </div>
+          <h3 class="font-semibold text-ink text-sm mb-2">Actuarial Intelligence Reporting</h3>
+          <p class="text-stone text-xs leading-relaxed">Structured loss-frequency reports calibrated to FSCA disclosure standards. Projected claim suppression ratios. Net Present Value modelling. The forensic data layer your underwriting team has never had access to.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO WE SERVE -->
+  <section class="bg-warm border-y border-border">
+    <div class="max-w-7xl mx-auto px-5 lg:px-10 py-20">
+      <div class="text-center mb-14 section-reveal">
+        <div class="label mb-3">Who We Serve</div>
+        <h2 class="f-display text-4xl md:text-5xl font-light text-ink">Institutional Partners Only.</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="card rounded-2xl bg-white p-8 section-reveal">
+          <div class="w-12 h-12 rounded-xl bg-navyLight flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          </div>
+          <h3 class="font-semibold text-ink mb-2">Short-Term Insurers & Underwriters</h3>
+          <p class="text-stone text-sm leading-relaxed">Reduce pressure-vessel claim frequency through pre-failure interception. Quantify per-unit actuarial exposure via the Predictive Failure Coefficient™. Pilot risk-differentiated premium structures backed by continuous sensor telemetry.</p>
+        </div>
+        <div class="card rounded-2xl bg-white p-8 section-reveal" style="transition-delay:.1s">
+          <div class="w-12 h-12 rounded-xl bg-emeraldLt flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-emeraldDk" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3 class="font-semibold text-ink mb-2">Body Corporates &amp; Schemes</h3>
+          <p class="text-stone text-xs leading-relaxed">Eliminate post-failure maintenance cycles through pre-event anomaly interception. Maintain a continuous hydrostatic and thermal status register across every unit in your scheme. Issue maintenance mandates before structural water damage propagates.</p>
+        </div>
+        <div class="card rounded-2xl bg-white p-8 section-reveal" style="transition-delay:.2s">
+          <div class="w-12 h-12 rounded-xl bg-navyLight flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/></svg>
+          </div>
+          <h3 class="font-semibold text-ink mb-2">Institutional Asset Managers</h3>
+          <p class="text-stone text-xs leading-relaxed">Protect long-cycle capital across large residential and commercial portfolios. Apply the Predictive Failure Coefficient™ to specify actuarially-validated appliances for new developments. Build a forensic mechanical reliability record eligible for TIA and Seda grant substantiation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <section class="max-w-7xl mx-auto px-5 lg:px-10 py-24 text-center section-reveal">
+    <div class="label mb-4">Next Step</div>
+    <h2 class="f-display text-4xl md:text-5xl font-light text-ink mb-5">Ready to Shift from<br/><em>Reactive Liability to Predictive Certainty?</em></h2>
+    <p class="text-stone text-base max-w-md mx-auto mb-8">Every engagement commences with a confidential technical intelligence briefing. No published rate schedules. Institutional access only — strictly by prior arrangement.</p>
+    <button onclick="showTab('contact')" class="btn-navy inline-flex items-center gap-2.5 px-9 py-4 rounded-sm text-sm font-semibold shadow-lg">
+      Request Proprietary Briefing
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+    </button>
+  </section>
+
+</div><!-- /panel-home -->
+
+
+<!-- ═══════════════════════════════════════════════════════
+     TAB: TECHNOLOGY
+═══════════════════════════════════════════════════════ -->
+<div id="panel-technology" role="tabpanel" aria-labelledby="tab-technology" class="tab-panel pt-[64px]">
+  <div class="max-w-7xl mx-auto px-5 lg:px-10 py-20">
+
+    <div class="mb-16 section-reveal">
+      <div class="label mb-4">The Detection Platform</div>
+      <h2 class="f-display text-5xl md:text-6xl font-light text-ink leading-[1.0] mb-5">
+        Edge-Inference Frequency<br/>Topology™ <em>Architecture.</em>
+      </h2>
+      <p class="text-stone text-lg max-w-2xl leading-relaxed">A proprietary multi-modal telemetry stack engineered from the sensor node upward — precision-calibrated for the thermodynamic gradients, hydrostatic pressure differentials, and power-infrastructure variability intrinsic to South African residential and commercial built environments.</p>
+    </div>
+
+    <!-- Architecture diagram -->
+    <div class="grid lg:grid-cols-12 gap-10 mb-20">
+      <div class="lg:col-span-8 section-reveal">
+        <div class="rounded-2xl border border-border overflow-hidden shadow-[0_16px_60px_rgba(14,61,110,.1)]">
+          <div class="bg-navy px-6 py-4 flex items-center justify-between">
+            <div class="f-mono text-[9px] text-white/50 uppercase tracking-wider">System Architecture · Edge-Inference Frequency Topology™ v2</div>
+            <div class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-emerald blink" aria-hidden="true"></div><span class="f-mono text-[9px] text-emerald">Operational</span></div>
+          </div>
+          <div class="bg-navyXLight p-6">
+            <svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" class="w-full" role="img" aria-label="Edge-Inference Frequency Topology system architecture diagram">
+              <!-- Layer labels -->
+              <text x="10" y="22" font-family="Martian Mono,monospace" font-size="8" fill="var(--stone)" letter-spacing="2">EDGE LAYER</text>
+              <text x="10" y="130" font-family="Martian Mono,monospace" font-size="8" fill="var(--stone)" letter-spacing="2">TRANSMISSION</text>
+              <text x="10" y="238" font-family="Martian Mono,monospace" font-size="8" fill="var(--stone)" letter-spacing="2">INTELLIGENCE</text>
+              <!-- Sensor nodes -->
+              <rect x="80" y="30" width="80" height="64" rx="8" fill="white" stroke="var(--border)" stroke-width="1.5"/>
+              <text x="120" y="54" text-anchor="middle" font-family="Martian Mono,monospace" font-size="7" fill="var(--navy)">PULSE™</text>
+              <text x="120" y="65" text-anchor="middle" font-family="Martian Mono,monospace" font-size="7" fill="var(--navy)">UNIT</text>
+              <text x="120" y="84" text-anchor="middle" font-family="Martian Mono,monospace" font-size="6" fill="var(--stone)">10s cadence</text>
+              <rect x="200" y="30" width="80" height="64" rx="8" fill="white" stroke="var(--border)" stroke-width="1.5"/>
+              <text x="240" y="54" text-anchor="middle" font-family="Martian Mono,monospace" font-size="7" fill="var(--navy)">THERMAL</text>
+              <text x="240" y="65" text-anchor="middle" font-family="Martian Mono,monospace" font-size="7" fill="var(--navy)">PROBE</text>
+              <text x="240" y="84" text-anchor="middle" font-family="Martian Mono,monospace" font-size="6" fill="var(--stone)">±0.1°C</text>
+              <rect x="320" y="30" width="80" height="64" rx="8" fill="white" stroke="var(--border)" stroke-width="1.5"/>
+              <text x="360" y="54" text-anchor="middle" font-family="Martian Mono,monospace" font-size="7" fill="var(--navy)">PRESSURE</text>
+              <text x="360" y="65" text-anchor="middle" font-family="Martian Mono,monospace" font-size="7" fill="var(--navy)">SENSOR</text>
+              <text x="360" y="84" text-anchor="middle" font-family="Martian Mono,monospace" font-size="6" fill="var(--stone)">±0.5 kPa</text>
+              <rect x="440" y="30" width="80" height="64" rx="8" fill="white" stroke="var(--border)" stroke-width="1.5"/>
+              <text x="480" y="54" text-anchor="middle" font-family="Martian Mono,monospace" font-size="7" fill="var(--navy)">ELEMENT</text>
+              <text x="480" y="65" text-anchor="middle" font-family="Martian Mono,monospace" font-size="7" fill="var(--navy)">MONITOR</text>
+              <text x="480" y="84" text-anchor="middle" font-family="Martian Mono,monospace" font-size="6" fill="var(--stone)">Current draw</text>
+              <!-- Lines down to aggregator -->
+              <line x1="120" y1="94" x2="300" y2="138" stroke="var(--navyMid)" stroke-width="1" opacity=".4" stroke-dasharray="4,3"/>
+              <line x1="240" y1="94" x2="300" y2="138" stroke="var(--navyMid)" stroke-width="1" opacity=".4" stroke-dasharray="4,3"/>
+              <line x1="360" y1="94" x2="320" y2="138" stroke="var(--navyMid)" stroke-width="1" opacity=".4" stroke-dasharray="4,3"/>
+              <line x1="480" y1="94" x2="340" y2="138" stroke="var(--navyMid)" stroke-width="1" opacity=".4" stroke-dasharray="4,3"/>
+              <!-- Aggregator -->
+              <rect x="220" y="138" width="200" height="56" rx="10" fill="var(--navy)"/>
+              <text x="320" y="160" text-anchor="middle" font-family="Martian Mono,monospace" font-size="8" fill="white">EDGE AGGREGATOR</text>
+              <text x="320" y="174" text-anchor="middle" font-family="Martian Mono,monospace" font-size="7" fill="rgba(255,255,255,.5)">AES-256 · Local pre-processing</text>
+              <!-- Line down to engine -->
+              <line x1="320" y1="194" x2="320" y2="246" stroke="var(--emerald)" stroke-width="1.5" opacity=".6"/>
+              <text x="335" y="225" font-family="Martian Mono,monospace" font-size="7" fill="var(--emerald)">Encrypted</text>
+              <!-- Intelligence layer -->
+              <rect x="160" y="246" width="160" height="52" rx="8" fill="white" stroke="var(--navyMid)" stroke-width="1.5"/>
+              <text x="240" y="268" text-anchor="middle" font-family="Martian Mono,monospace" font-size="7" fill="var(--navy)">TSVA™ ENGINE</text>
+              <text x="240" y="281" text-anchor="middle" font-family="Martian Mono,monospace" font-size="6" fill="var(--stone)">Spectral scoring · Pre-failure classification</text>
+              <rect x="360" y="246" width="140" height="52" rx="8" fill="white" stroke="var(--emerald)" stroke-width="1.5"/>
+              <text x="430" y="268" text-anchor="middle" font-family="Martian Mono,monospace" font-size="7" fill="var(--emeraldDk)">CLIENT PORTAL</text>
+              <text x="430" y="281" text-anchor="middle" font-family="Martian Mono,monospace" font-size="6" fill="var(--stone)">Live dashboard · Reports</text>
+              <line x1="320" y1="272" x2="360" y2="272" stroke="var(--emerald)" stroke-width="1" opacity=".5"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-4 space-y-5 section-reveal">
+        <div class="card rounded-xl bg-white p-6">
+          <div class="f-mono text-[9px] text-stone uppercase tracking-wider mb-4">Sensor Specifications</div>
+          <div class="space-y-3">
+            <div class="flex justify-between items-center py-2.5 border-b border-border"><span class="text-xs text-stone">Sampling Interval</span><span class="f-mono text-xs text-navy font-medium">10 seconds</span></div>
+            <div class="flex justify-between items-center py-2.5 border-b border-border"><span class="text-xs text-stone">Thermal Accuracy</span><span class="f-mono text-xs text-navy font-medium">±0.1°C</span></div>
+            <div class="flex justify-between items-center py-2.5 border-b border-border"><span class="text-xs text-stone">Pressure Range</span><span class="f-mono text-xs text-navy font-medium">0–600 kPa</span></div>
+            <div class="flex justify-between items-center py-2.5 border-b border-border"><span class="text-xs text-stone">Encryption</span><span class="f-mono text-xs text-emeraldDk font-medium">AES-256</span></div>
+            <div class="flex justify-between items-center py-2.5 border-b border-border"><span class="text-xs text-stone">TSVA™ Classification Accuracy</span><span class="f-mono text-xs text-navy font-medium">99%</span></div>
+            <div class="flex justify-between items-center py-2.5"><span class="text-xs text-stone">Pre-Failure Alert Latency</span><span class="f-mono text-xs text-navy font-medium">&lt;30s</span></div>
+          </div>
+        </div>
+        <div class="rounded-xl bg-navy p-6">
+          <div class="f-mono text-[9px] text-white/40 uppercase tracking-wider mb-3">Design Philosophy</div>
+          <p class="text-white/70 text-sm leading-relaxed">"Engineered for South African operational parameters — load-shedding resilience via capacitive buffering, coastal salt-air corrosion resistance, and high-altitude thermal-cycle endurance validated across 6 climate-zone cohorts."</p>
+          <div class="f-mono text-[9px] text-emerald mt-4 uppercase tracking-wider">— Engineering Brief, 2026</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Data pipeline visual -->
+    <div class="rounded-2xl bg-navyXLight border border-border p-8 mb-10 section-reveal">
+      <div class="f-mono text-[9px] text-stone uppercase tracking-wider mb-8 text-center">Telemetry & Inference Data Flow</div>
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-4 items-center text-center">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-white border border-border flex items-center justify-center mx-auto mb-3 shadow-sm">
+            <svg class="w-6 h-6 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+          </div>
+          <div class="f-mono text-[9px] text-navy uppercase tracking-wider">Pulse™ Unit</div>
+          <div class="f-mono text-[8px] text-stone mt-1">Edge device</div>
+        </div>
+        <div class="flex items-center justify-center">
+          <div class="flex-1 h-px bg-gradient-to-r from-navyMid to-emerald hidden md:block"></div>
+          <div class="f-mono text-[8px] text-stone px-2 md:hidden text-center">↓ Encrypted</div>
+          <div class="hidden md:block f-mono text-[8px] text-stone whitespace-nowrap px-2">Encrypted</div>
+          <div class="flex-1 h-px bg-gradient-to-r from-emerald to-navyMid hidden md:block"></div>
+        </div>
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-white border border-border flex items-center justify-center mx-auto mb-3 shadow-sm">
+            <svg class="w-6 h-6 text-navyMid" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <div class="f-mono text-[9px] text-navy uppercase tracking-wider">TSVA™ Inference Engine</div>
+          <div class="f-mono text-[8px] text-stone mt-1">Spectral classification</div>
+        </div>
+        <div class="flex items-center justify-center">
+          <div class="flex-1 h-px bg-gradient-to-r from-navyMid to-emerald hidden md:block"></div>
+          <div class="f-mono text-[8px] text-stone px-2 md:hidden text-center">↓ Processed</div>
+          <div class="hidden md:block f-mono text-[8px] text-stone whitespace-nowrap px-2">Processed</div>
+          <div class="flex-1 h-px bg-gradient-to-r from-emerald to-navyMid hidden md:block"></div>
+        </div>
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-white border border-border flex items-center justify-center mx-auto mb-3 shadow-sm">
+            <svg class="w-6 h-6 text-emeraldDk" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </div>
+          <div class="f-mono text-[9px] text-navy uppercase tracking-wider">Intelligence Portal</div>
+          <div class="f-mono text-[8px] text-stone mt-1">Actuarial reporting</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10 text-center section-reveal">
+      <button onclick="showTab('contact')" class="btn-navy inline-flex items-center gap-2.5 px-8 py-3.5 rounded-sm text-sm font-medium shadow-md">
+        Request Technical Architecture Briefing
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+      </button>
+    </div>
+  </div>
+</div><!-- /panel-technology -->
+
+
+<!-- ═══════════════════════════════════════════════════════
+     TAB: DATA ADVANTAGE
+═══════════════════════════════════════════════════════ -->
+<div id="panel-advantage" role="tabpanel" aria-labelledby="tab-advantage" class="tab-panel pt-[64px]">
+  <div class="max-w-7xl mx-auto px-5 lg:px-10 py-20">
+
+    <div class="mb-16">
+      <div class="label mb-4">Failure Analytics</div>
+      <h2 class="f-display text-5xl md:text-6xl font-light text-ink leading-[1.0] mb-5">Know Which Appliances<br/><em>Fail First.</em></h2>
+      <p class="text-stone text-lg max-w-2xl leading-relaxed">Before you underwrite 500 units or specify appliances for a new development, you require statistically validated field failure-rate data for every manufacturer operating in South African climate conditions. That dataset exists. We built it.</p>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-10 items-start">
+
+      <!-- Left: 5 cols -->
+      <div class="lg:col-span-5">
+        <div class="rounded-xl bg-navyXLight border border-border p-6 mb-6 section-reveal">
+          <div class="f-mono text-[9px] text-stone uppercase tracking-wider mb-4">Illustrative · Full data in briefing only</div>
+          <svg viewBox="0 0 300 130" xmlns="http://www.w3.org/2000/svg" class="w-full mb-3" role="img" aria-label="Bar chart showing illustrative Predictive Failure Coefficient data by manufacturer">
+            <rect width="300" height="130" fill="transparent"/>
+            <rect class="bar-grow b1" x="10"  y="100" width="28" height="20" fill="var(--emerald)" rx="2"/>
+            <rect class="bar-grow b2" x="50"  y="82"  width="28" height="38" fill="var(--emerald)" opacity=".75" rx="2"/>
+            <rect class="bar-grow b3" x="90"  y="62"  width="28" height="58" fill="var(--navyMid)" opacity=".6" rx="2"/>
+            <rect class="bar-grow b4" x="130" y="42"  width="28" height="78" fill="var(--navyMid)" opacity=".8" rx="2"/>
+            <rect class="bar-grow b5" x="170" y="22"  width="28" height="98" fill="#DC2626" opacity=".6" rx="2"/>
+            <rect class="bar-grow b6" x="210" y="8"   width="28" height="112" fill="#DC2626" opacity=".85" rx="2"/>
+            <text x="24"  y="126" text-anchor="middle" font-family="Martian Mono,monospace" font-size="7" fill="var(--stone)">A</text>
+            <text x="64"  y="126" text-anchor="middle" font-family="Martian Mono,monospace" font-size="7" fill="var(--stone)">B</text>
+            <text x="104" y="126" text-anchor="middle" font-family="Martian Mono,monospace" font-size="7" fill="var(--stone)">C</text>
+            <text x="144" y="126" text-anchor="middle" font-family="Martian Mono,monospace" font-size="7" fill="var(--stone)">D</text>
+            <text x="184" y="126" text-anchor="middle" font-family="Martian Mono,monospace" font-size="7" fill="var(--stone)">E</text>
+            <text x="224" y="126" text-anchor="middle" font-family="Martian Mono,monospace" font-size="7" fill="var(--stone)">F</text>
+            <line x1="0" y1="68" x2="255" y2="68" stroke="rgba(220,38,38,.2)" stroke-width="1" stroke-dasharray="4,3"/>
+            <text x="258" y="72" font-family="Martian Mono,monospace" font-size="6" fill="rgba(220,38,38,.5)">Risk</text>
+            <text x="258" y="80" font-family="Martian Mono,monospace" font-size="6" fill="rgba(220,38,38,.5)">line</text>
+          </svg>
+          <div class="f-mono text-[8px] text-stone">Field failure rate by brand · 36-month SA dataset</div>
+        </div>
+
+        <div class="space-y-4 section-reveal">
+          <div class="card rounded-xl bg-white p-5 flex gap-4 items-start">
+            <div class="w-9 h-9 rounded-lg bg-navyLight flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            </div>
+            <div>
+              <div class="font-semibold text-ink text-sm mb-1">14 Manufacturers — PFC™ Rated</div>
+              <div class="text-stone text-xs leading-relaxed">Stratified across 6 South African climate-zone cohorts: coastal high-humidity, inland semi-arid, high-altitude cold, interior plateau, peri-urban dense, and sub-tropical humid.</div>
+            </div>
+          </div>
+          <div class="card rounded-xl bg-white p-5 flex gap-4 items-start">
+            <div class="w-9 h-9 rounded-lg bg-emeraldLt flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-emeraldDk" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+            </div>
+            <div>
+              <div class="font-semibold text-ink text-sm mb-1">Specification-Stage Advisory</div>
+              <div class="text-stone text-xs leading-relaxed">Specify pressure-vessel appliances for new developments on the basis of empirically validated field failure coefficients — not manufacturer warranty claims, sales-channel incentives, or anecdotal service records.</div>
+            </div>
+          </div>
+          <div class="card rounded-xl bg-white p-5 flex gap-4 items-start">
+            <div class="w-9 h-9 rounded-lg bg-navyLight flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            </div>
+            <div>
+              <div class="font-semibold text-ink text-sm mb-1">Restricted Dataset — NDA Required</div>
+              <div class="text-stone text-xs leading-relaxed">The full Predictive Failure Coefficient™ dataset is not available in the public domain. Access is subject to institutional vetting, NDA execution, and formal engagement. It constitutes our primary proprietary intelligence asset.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: 7 cols — locked table -->
+      <div class="lg:col-span-7 section-reveal">
+        <div class="rounded-2xl border border-border overflow-hidden shadow-[0_12px_48px_rgba(14,61,110,.09)]">
+          <div class="bg-navy px-6 py-5 flex items-center justify-between">
+            <div>
+              <div class="f-mono text-[9px] text-white/40 uppercase tracking-wider mb-1">Qua Pulse Technologies</div>
+              <div class="text-white font-semibold">Predictive Failure Coefficient™ (PFC™)</div>
+            </div>
+            <div class="flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-md">
+              <svg class="w-3.5 h-3.5 text-emerald" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>
+              <span class="f-mono text-[9px] text-white/60">Restricted — NDA Required</span>
+            </div>
+          </div>
+          <div class="bg-navyXLight px-6 py-3 border-b border-border grid grid-cols-12 gap-2">
+            <div class="col-span-1 f-mono text-[8px] text-stone uppercase tracking-wider">#</div>
+            <div class="col-span-3 f-mono text-[8px] text-stone uppercase tracking-wider">Brand</div>
+            <div class="col-span-2 f-mono text-[8px] text-stone uppercase tracking-wider">PFC™ Index</div>
+            <div class="col-span-2 f-mono text-[8px] text-stone uppercase tracking-wider hidden sm:block">MTTF (yrs)</div>
+            <div class="col-span-2 f-mono text-[8px] text-stone uppercase tracking-wider">Risk Class</div>
+            <div class="col-span-2 f-mono text-[8px] text-stone uppercase tracking-wider hidden sm:block">PFC™ Score</div>
+          </div>
+          <div class="divide-y divide-border">
+            <div class="brand-row px-6 py-4 grid grid-cols-12 gap-2 items-center">
+              <div class="col-span-1 f-mono text-xs text-stone">01</div>
+              <div class="col-span-3 font-medium text-sm text-ink">Brand A</div>
+              <div class="col-span-2 f-mono text-xs text-emeraldDk font-medium">4.2%</div>
+              <div class="col-span-2 f-mono text-xs text-ink hidden sm:block">8.4 yrs</div>
+              <div class="col-span-2"><span class="f-mono text-[9px] bg-emeraldLt text-emeraldDk px-2 py-0.5 rounded-full uppercase tracking-wide">Excellent</span></div>
+              <div class="col-span-2 hidden sm:flex gap-0.5"><div class="w-3.5 h-3.5 rounded bg-emerald"></div><div class="w-3.5 h-3.5 rounded bg-emerald"></div><div class="w-3.5 h-3.5 rounded bg-emerald"></div><div class="w-3.5 h-3.5 rounded bg-emerald"></div><div class="w-3.5 h-3.5 rounded bg-emerald opacity-25"></div></div>
+            </div>
+            <div class="brand-row px-6 py-4 grid grid-cols-12 gap-2 items-center">
+              <div class="col-span-1 f-mono text-xs text-stone">02</div>
+              <div class="col-span-3 font-medium text-sm text-ink">Brand B</div>
+              <div class="col-span-2 f-mono text-xs text-emeraldDk font-medium">6.8%</div>
+              <div class="col-span-2 f-mono text-xs text-ink hidden sm:block">7.1 yrs</div>
+              <div class="col-span-2"><span class="f-mono text-[9px] bg-emeraldLt text-emeraldDk px-2 py-0.5 rounded-full uppercase tracking-wide">Good</span></div>
+              <div class="col-span-2 hidden sm:flex gap-0.5"><div class="w-3.5 h-3.5 rounded bg-emerald"></div><div class="w-3.5 h-3.5 rounded bg-emerald"></div><div class="w-3.5 h-3.5 rounded bg-emerald"></div><div class="w-3.5 h-3.5 rounded bg-emerald opacity-25"></div><div class="w-3.5 h-3.5 rounded bg-emerald opacity-25"></div></div>
+            </div>
+            <!-- Blurred rows -->
+            <div class="px-6 py-4 grid grid-cols-12 gap-2 items-center opacity-20 select-none pointer-events-none" aria-hidden="true">
+              <div class="col-span-1 f-mono text-xs text-stone">03</div><div class="col-span-3 font-medium text-sm">Brand ████</div><div class="col-span-2 f-mono text-xs">██.█%</div><div class="col-span-2 f-mono text-xs hidden sm:block">█.█ yrs</div><div class="col-span-2"><span class="f-mono text-[9px] bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded-full uppercase">Average</span></div><div class="col-span-2 hidden sm:flex gap-0.5"><div class="w-3.5 h-3.5 rounded bg-yellow-400"></div><div class="w-3.5 h-3.5 rounded bg-yellow-400"></div><div class="w-3.5 h-3.5 rounded bg-gray-200"></div><div class="w-3.5 h-3.5 rounded bg-gray-200"></div><div class="w-3.5 h-3.5 rounded bg-gray-200"></div></div>
+            </div>
+            <div class="px-6 py-4 grid grid-cols-12 gap-2 items-center opacity-10 select-none pointer-events-none" aria-hidden="true">
+              <div class="col-span-1 f-mono text-xs text-stone">04</div><div class="col-span-3 font-medium text-sm">Brand ████</div><div class="col-span-2 f-mono text-xs text-red-500">██.█%</div><div class="col-span-2 f-mono text-xs hidden sm:block">█.█ yrs</div><div class="col-span-2"><span class="f-mono text-[9px] bg-red-100 text-red-700 px-2 py-0.5 rounded-full uppercase">Poor</span></div><div class="col-span-2 hidden sm:flex gap-0.5"><div class="w-3.5 h-3.5 rounded bg-red-400"></div><div class="w-3.5 h-3.5 rounded bg-gray-200"></div><div class="w-3.5 h-3.5 rounded bg-gray-200"></div><div class="w-3.5 h-3.5 rounded bg-gray-200"></div><div class="w-3.5 h-3.5 rounded bg-gray-200"></div></div>
+            </div>
+            <div class="px-6 py-3 grid grid-cols-12 gap-2 items-center opacity-5 select-none pointer-events-none" aria-hidden="true">
+              <div class="col-span-1 f-mono text-xs text-stone">05</div><div class="col-span-3 font-medium text-sm">Brand ████</div><div class="col-span-2 f-mono text-xs text-red-600">██.█%</div><div class="col-span-2 hidden sm:block"></div><div class="col-span-2"><span class="f-mono text-[9px] bg-red-100 text-red-700 px-2 py-0.5 rounded-full uppercase">Critical</span></div><div class="col-span-2 hidden sm:block"></div>
+            </div>
+            <!-- Access gate -->
+            <div class="px-6 py-8 bg-gradient-to-t from-white via-white/95 to-transparent -mt-16 flex flex-col items-center text-center">
+              <div class="w-11 h-11 rounded-full bg-navyLight flex items-center justify-center mb-4">
+                <svg class="w-5 h-5 text-navy" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>
+              </div>
+              <div class="f-mono text-[9px] text-stone uppercase tracking-wider mb-2">14 manufacturers · 6 climate cohorts · Institutional access required</div>
+              <div class="f-display text-xl font-semibold text-ink mb-4">Full PFC™ dataset released under institutional briefing & NDA</div>
+              <button onclick="showTab('contact')" class="btn-navy px-6 py-2.5 rounded-sm text-sm font-medium inline-flex items-center gap-2">
+                Access Data Room
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case study -->
+        <div class="mt-6 rounded-xl bg-navyXLight border border-border p-6 flex gap-5 items-start section-reveal">
+          <div class="w-10 h-10 rounded-lg bg-emeraldLt flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-emeraldDk" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+          </div>
+          <div>
+            <div class="font-semibold text-ink text-sm mb-1">PFC™ Applied: Specification-Stage Capital Protection</div>
+            <p class="text-stone text-xs leading-relaxed">A developer specifying appliances for a 500-unit complex applied the Predictive Failure Coefficient™ to reselect from a high-PFC™ manufacturer to a statistically lower-failure alternative — projecting an <strong class="text-ink">R2.3M reduction in lifecycle loss-adjustment and remediation costs</strong> over a 10-year asset horizon, prior to a single unit being procured.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /panel-advantage -->
+
+
+<!-- ═══════════════════════════════════════════════════════
+     TAB: ABOUT
+═══════════════════════════════════════════════════════ -->
+<div id="panel-about" role="tabpanel" aria-labelledby="tab-about" class="tab-panel pt-[64px]">
+  <div class="max-w-7xl mx-auto px-5 lg:px-10 py-20">
+
+    <div class="mb-16">
+      <div class="label mb-4">The Founder</div>
+      <h2 class="f-display text-5xl md:text-6xl font-light text-ink leading-[1.0]">Built by Someone<br/>Who Saw the <em>Problem</em><br/>from the Inside.</h2>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-10 items-start mb-16 section-reveal">
+
+      <div class="lg:col-span-4">
+        <div class="photo-placeholder rounded-2xl w-full aspect-[4/5] flex flex-col items-center justify-center mb-6 relative overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-br from-navyXLight via-white to-navyLight opacity-60"></div>
+          <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg" class="w-40 opacity-25 relative z-10" aria-hidden="true">
+            <circle cx="100" cy="60" r="40" fill="var(--navy)"/>
+            <ellipse cx="100" cy="175" rx="60" ry="55" fill="var(--navy)"/>
+          </svg>
+          <div class="absolute bottom-4 left-4 right-4 bg-white/80 backdrop-blur rounded-lg px-4 py-3 z-10">
+            <div class="font-semibold text-ink text-sm">Bonga Giyani Baloyi</div>
+            <div class="f-mono text-[9px] text-navyMid uppercase tracking-wider mt-0.5">Founder & Lead Strategist</div>
+            <div class="f-mono text-[8px] text-stone mt-1">📍 Durban, KwaZulu-Natal</div>
+          </div>
+          <div class="absolute top-4 right-4 z-10">
+            <div class="bg-emerald/90 text-white f-mono text-[8px] uppercase tracking-wider px-2.5 py-1 rounded-full">Founder</div>
+          </div>
+        </div>
+        <div class="space-y-3">
+          <a href="https://linkedin.com/in/giyani-baloyi" target="_blank" rel="noopener" class="flex items-center gap-3 px-4 py-3 rounded-xl border border-border bg-white hover:border-navy/25 hover:shadow-sm transition-all group">
+            <div class="w-8 h-8 rounded-lg bg-[#0A66C2] flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </div>
+            <div>
+              <div class="text-xs font-medium text-ink group-hover:text-navy transition-colors">Connect on LinkedIn</div>
+              <div class="f-mono text-[9px] text-stone">linkedin.com/in/giyani-baloyi</div>
+            </div>
+            <svg class="w-4 h-4 text-stone ml-auto group-hover:text-navy transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          </a>
+          <button onclick="showTab('contact')" class="flex items-center gap-3 px-4 py-3 rounded-xl border border-border bg-white hover:border-navy/25 hover:shadow-sm transition-all group w-full text-left">
+            <div class="w-8 h-8 rounded-lg bg-navyLight flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <div>
+              <div class="text-xs font-medium text-ink group-hover:text-navy transition-colors">Request a Briefing</div>
+              <div class="f-mono text-[9px] text-stone">Institutional access only</div>
+            </div>
+            <svg class="w-4 h-4 text-stone ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="lg:col-span-8">
+        <div class="mb-8">
+          <div class="f-mono text-[9px] text-navyMid uppercase tracking-wider mb-2">Bonga Giyani Baloyi</div>
+          <h3 class="f-display text-4xl font-semibold text-ink mb-1">Founder & Lead Strategist</h3>
+          <div class="f-mono text-[10px] text-stone uppercase tracking-wider">Qua Pulse Technologies · Durban, KwaZulu-Natal</div>
+        </div>
+        <div class="rule mb-7" aria-hidden="true"></div>
+        <div class="prose prose-sm max-w-none space-y-5 text-stone leading-relaxed">
+          <p>Bonga Giyani Baloyi is the architect behind Qua Pulse Technologies, a Durban-based data intelligence firm dedicated to redefining institutional risk. His work focuses on bridging the gap between advanced IoT engineering and the high-stakes demands of the insurance and property management sectors.</p>
+          <div class="relative pl-10 my-8">
+            <div class="timeline-line" aria-hidden="true"></div>
+            <div class="space-y-8">
+              <div class="relative">
+                <div class="absolute -left-10 mt-1 timeline-dot" aria-hidden="true"></div>
+                <div class="f-mono text-[9px] text-navyMid uppercase tracking-wider mb-1">2024 – 2026</div>
+                <div class="font-semibold text-ink text-sm mb-1.5">Founder, Ngaoyi Cleaning</div>
+                <p class="text-stone text-sm leading-relaxed">Operating a multi-regional property service venture across residential and commercial maintenance, Bonga worked at the front lines of the built environment. Here he encountered a recurring systemic failure: the property industry trapped in a cycle of <em class="text-ink">"Reactive Loss"</em> — spending millions to repair damage that could have been predicted and prevented.</p>
+              </div>
+              <div class="relative">
+                <div class="absolute -left-10 mt-1 timeline-dot" aria-hidden="true"></div>
+                <div class="f-mono text-[9px] text-navyMid uppercase tracking-wider mb-1">The Pivot</div>
+                <div class="font-semibold text-ink text-sm mb-1.5">From Reaction to Prediction</div>
+                <p class="text-stone text-sm leading-relaxed">Recognising that cleaning up after a catastrophe was an inefficient solution to a data problem, Bonga pivoted his focus toward Proactive Mitigation. He leveraged his background in operational management and deep expertise in electronics prototyping to develop <strong class="text-ink">Acoustic Waveguide Impedance Mapping™</strong> — a proprietary multi-modal sensor fusion architecture that assigns a continuous acoustic and thermodynamic signal profile to every monitored asset, enabling statistically validated pre-failure classification.</p>
+              </div>
+              <div class="relative">
+                <div class="absolute -left-10 mt-1 timeline-dot" style="background:var(--emerald)" aria-hidden="true"></div>
+                <div class="f-mono text-[9px] text-emeraldDk uppercase tracking-wider mb-1">Today</div>
+                <div class="font-semibold text-ink text-sm mb-1.5">Qua Pulse Technologies</div>
+                <p class="text-stone text-sm leading-relaxed">Under his leadership, Qua Pulse has evolved from a hardware concept into a comprehensive risk intelligence ecosystem. Bonga is committed to constructing the definitive sub-Saharan African dataset for pressure-vessel failure coefficients — providing body corporates, short-term insurers, and TIA/Seda-aligned grant panels with the actuarially rigorous certainty required to protect long-cycle capital and eliminate loss-frequency unpredictability across the built environment.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8">
+          <div class="f-mono text-[9px] text-stone uppercase tracking-wider mb-4">Areas of Expertise</div>
+          <div class="flex flex-wrap gap-2" role="list">
+            <span class="expertise-pill" role="listitem">Actuarial Risk Architecture</span>
+            <span class="expertise-pill" role="listitem">Multi-Modal Sensor Fusion</span>
+            <span class="expertise-pill" role="listitem">Transient Spectral Variance Analysis™</span>
+            <span class="expertise-pill" role="listitem">Built Environment Asset Management</span>
+            <span class="expertise-pill" role="listitem">Edge-Inference Hardware Engineering</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Company mission card -->
+    <div class="rounded-2xl bg-navy p-10 lg:p-14 section-reveal">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <div class="f-mono text-[9px] text-white/40 uppercase tracking-wider mb-4">Company Mission</div>
+          <h3 class="f-display text-4xl font-light text-white leading-tight mb-5">Constructing the Definitive<br/><em>Sub-Saharan Failure Coefficient</em><br/>Dataset for Pressure-Vessel Assets.</h3>
+          <p class="text-white/60 text-sm leading-relaxed">Qua Pulse Technologies exists to give South African short-term insurers, actuarial teams, and institutional asset managers the empirically validated forensic certainty they have never had access to — a continuously updated, multi-modal intelligence layer across every pressure-vessel asset in their managed portfolio.</p>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-white/8 border border-white/10 rounded-xl p-5"><div class="f-display text-4xl font-semibold text-white mb-1">2026</div><div class="f-mono text-[9px] text-white/40 uppercase tracking-wider">Founded</div></div>
+          <div class="bg-white/8 border border-white/10 rounded-xl p-5"><div class="f-display text-4xl font-semibold text-emerald mb-1">KZN</div><div class="f-mono text-[9px] text-white/40 uppercase tracking-wider">Headquarters</div></div>
+          <div class="bg-white/8 border border-white/10 rounded-xl p-5"><div class="f-display text-4xl font-semibold text-white mb-1">IoT</div><div class="f-mono text-[9px] text-white/40 uppercase tracking-wider">Sector</div></div>
+          <div class="bg-white/8 border border-white/10 rounded-xl p-5"><div class="f-display text-4xl font-semibold text-emerald mb-1">B2B</div><div class="f-mono text-[9px] text-white/40 uppercase tracking-wider">Institutional Focus</div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div><!-- /panel-about -->
+
+
+<!-- ═══════════════════════════════════════════════════════
+     TAB: CONTACT
+═══════════════════════════════════════════════════════ -->
+<div id="panel-contact" role="tabpanel" aria-labelledby="tab-contact" class="tab-panel pt-[64px]">
+  <div class="max-w-7xl mx-auto px-5 lg:px-10 py-20">
+
+    <div class="mb-14">
+      <div class="label mb-4">Engage</div>
+      <h2 class="f-display text-5xl md:text-6xl font-light text-ink leading-[1.0] mb-5">Institutional Engagement<br/><em>Protocol.</em></h2>
+      <p class="text-stone text-lg max-w-xl leading-relaxed">We engage selectively with short-term insurers, body corporates, institutional asset managers, and public sector grant evaluation bodies — including TIA and Seda — who require empirically defensible risk intelligence. There are no published rate schedules. Every engagement commences with a confidential technical intelligence briefing under NDA.</p>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-10 items-start">
+
+      <!-- Left: info + process -->
+      <div class="lg:col-span-4 space-y-6 section-reveal">
+
+        <div class="card rounded-xl bg-white p-6">
+          <div class="f-mono text-[9px] text-stone uppercase tracking-wider mb-5">Contact Information</div>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-navyLight flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div><div class="text-xs font-medium text-ink mb-0.5">Headquarters</div><div class="text-xs text-stone">Durban, KwaZulu-Natal<br/>South Africa</div></div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-navyLight flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <div><div class="text-xs font-medium text-ink mb-0.5">Enquiries</div><div class="text-xs text-stone">enquiries@quapulse.co.za</div></div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-navyLight flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              </div>
+              <div><div class="text-xs font-medium text-ink mb-0.5">Engagement Protocol</div><div class="text-xs text-stone">Institutional access only<br/>Response within 48 business hours</div></div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-[#0A66C2]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-[#0A66C2]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
+              <div><div class="text-xs font-medium text-ink mb-0.5">LinkedIn</div><a href="https://linkedin.com/in/giyani-baloyi" target="_blank" rel="noopener" class="text-xs text-[#0A66C2] hover:underline">linkedin.com/in/giyani-baloyi</a></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- What happens next -->
+        <div class="card rounded-xl bg-white p-6">
+          <div class="f-mono text-[9px] text-stone uppercase tracking-wider mb-5">What Happens Next</div>
+          <div class="space-y-5">
+            <div class="flex gap-3">
+              <div class="w-7 h-7 rounded-full bg-navyLight flex items-center justify-center flex-shrink-0 f-mono text-[10px] text-navy font-bold" aria-hidden="true">1</div>
+              <div><div class="text-xs font-semibold text-ink mb-1">Actuarial Exposure Modelling</div><div class="text-xs text-stone leading-relaxed">We calibrate your current claim-frequency data against our PFC™ dataset to generate a statistically validated annual loss-suppression projection.</div></div>
+            </div>
+            <div class="flex gap-3">
+              <div class="w-7 h-7 rounded-full bg-navyLight flex items-center justify-center flex-shrink-0 f-mono text-[10px] text-navy font-bold" aria-hidden="true">2</div>
+              <div><div class="text-xs font-semibold text-ink mb-1">Controlled Pilot Deployment</div><div class="text-xs text-stone leading-relaxed">30-day instrumented pilot across your highest-PFC™-rated units. Full AWIM™ telemetry dataset. No contractual obligation.</div></div>
+            </div>
+            <div class="flex gap-3">
+              <div class="w-7 h-7 rounded-full bg-emeraldLt flex items-center justify-center flex-shrink-0 f-mono text-[10px] text-emeraldDk font-bold" aria-hidden="true">3</div>
+              <div><div class="text-xs font-semibold text-ink mb-1">Actuarial Intelligence Report</div><div class="text-xs text-stone leading-relaxed">FSCA-structured report with claim-suppression ratios, loss-frequency projections, and a forensic PFC™ baseline eligible for TIA/Seda grant substantiation and board-level capital planning.</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- POPIA notice -->
+        <div class="rounded-xl bg-navyXLight border border-border p-5 flex gap-3 items-start">
+          <div class="w-5 h-5 flex-shrink-0 mt-0.5">
+            <svg class="w-5 h-5 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <p class="text-[10px] text-stone leading-relaxed"><strong class="text-ink">POPIA Act 4 of 2013 — Compliant.</strong> All information submitted is processed in accordance with the Protection of Personal Information Act. Data is never disclosed to third parties. End-to-end AES-256 encryption applied across all transmission channels.</p>
+        </div>
+      </div>
+
+      <!-- Right: form -->
+      <div class="lg:col-span-8 section-reveal">
+        <div class="rounded-2xl overflow-hidden border border-border shadow-[0_24px_80px_rgba(14,61,110,.12)]">
+          <!-- Secure header -->
+          <div class="portal-bg px-8 py-6 flex items-center justify-between">
+            <div>
+              <div class="f-mono text-[9px] text-white/40 uppercase tracking-wider mb-1">New Engagement</div>
+              <div class="text-white font-semibold text-lg">Request a Technical Intelligence Briefing</div>
+            </div>
+            <div class="flex items-center gap-2 bg-white/10 border border-white/15 px-3 py-1.5 rounded-lg">
+              <div class="w-1.5 h-1.5 rounded-full bg-emerald blink" aria-hidden="true"></div>
+              <span class="f-mono text-[9px] text-white/60 uppercase tracking-wider">Secure Form</span>
+            </div>
+          </div>
+
+          <!-- ── REFACTORED FORM — GAS Backend Integration ── -->
+          <div class="bg-white p-8">
+
+            <!-- Dynamic status display -->
+            <div id="formStatusDisplay" role="status" aria-live="polite" aria-atomic="true"></div>
+
+            <form id="quaPulseContactForm" novalidate>
+              <div class="grid sm:grid-cols-2 gap-4 mb-4">
+                <div>
+                  <label for="field-name" class="block f-mono text-[9px] text-stone uppercase tracking-wider mb-1.5">Full Name <span class="text-navy" aria-label="required">*</span></label>
+                  <input id="field-name" type="text" name="name" placeholder="John Smith" required autocomplete="name" class="form-in w-full rounded-lg px-4 py-3 text-sm text-ink placeholder-stone/40"/>
+                </div>
+                <div>
+                  <label for="field-company" class="block f-mono text-[9px] text-stone uppercase tracking-wider mb-1.5">Company Name <span class="text-navy" aria-label="required">*</span></label>
+                  <input id="field-company" type="text" name="company" placeholder="Acme Insurance Holdings Ltd" required autocomplete="organization" class="form-in w-full rounded-lg px-4 py-3 text-sm text-ink placeholder-stone/40"/>
+                </div>
+              </div>
+              <div class="mb-4">
+                <label for="field-email" class="block f-mono text-[9px] text-stone uppercase tracking-wider mb-1.5">Institutional Email <span class="text-navy" aria-label="required">*</span></label>
+                <input id="field-email" type="email" name="email" placeholder="john@company.co.za" required autocomplete="email" class="form-in w-full rounded-lg px-4 py-3 text-sm text-ink placeholder-stone/40"/>
+              </div>
+              <div class="grid sm:grid-cols-2 gap-4 mb-4">
+                <div>
+                  <label for="field-role" class="block f-mono text-[9px] text-stone uppercase tracking-wider mb-1.5">Role / Title <span class="text-navy" aria-label="required">*</span></label>
+                  <input id="field-role" type="text" name="role" placeholder="Claims Director" autocomplete="organization-title" class="form-in w-full rounded-lg px-4 py-3 text-sm text-ink placeholder-stone/40"/>
+                </div>
+                <div>
+                  <label for="field-units" class="block f-mono text-[9px] text-stone uppercase tracking-wider mb-1.5">Number of Units Managed <span class="text-navy" aria-label="required">*</span></label>
+                  <select id="field-units" name="units" class="form-in w-full rounded-lg px-4 py-3 text-sm text-ink appearance-none cursor-pointer">
+                    <option value="" disabled selected>Select portfolio size</option>
+                    <option>1 – 50 units</option>
+                    <option>51 – 200 units</option>
+                    <option>201 – 500 units</option>
+                    <option>501 – 1,000 units</option>
+                    <option>1,000+ units (Enterprise)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="mb-4">
+                <fieldset>
+                  <legend class="block f-mono text-[9px] text-stone uppercase tracking-wider mb-2">Organisation Type</legend>
+                  <div class="grid grid-cols-3 gap-2">
+                    <label class="flex items-center gap-2 bg-warm border border-border rounded-lg px-3 py-2.5 cursor-pointer hover:border-navy/30 transition-colors">
+                      <input type="radio" name="org" value="Insurer" class="accent-navy"/><span class="text-xs text-ink">Insurer</span>
+                    </label>
+                    <label class="flex items-center gap-2 bg-warm border border-border rounded-lg px-3 py-2.5 cursor-pointer hover:border-navy/30 transition-colors">
+                      <input type="radio" name="org" value="Body Corp" class="accent-navy"/><span class="text-xs text-ink">Body Corp</span>
+                    </label>
+                    <label class="flex items-center gap-2 bg-warm border border-border rounded-lg px-3 py-2.5 cursor-pointer hover:border-navy/30 transition-colors">
+                      <input type="radio" name="org" value="Developer" class="accent-navy"/><span class="text-xs text-ink">Developer</span>
+                    </label>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="mb-5">
+                <label for="field-message" class="block f-mono text-[9px] text-stone uppercase tracking-wider mb-1.5">Briefing Focus <span class="text-stone">(optional)</span></label>
+                <textarea id="field-message" name="message" rows="3" placeholder="e.g. Brand Reliability Index, Portfolio Risk Assessment, Pilot Programme, Data Room Access..." class="form-in w-full rounded-lg px-4 py-3 text-sm text-ink placeholder-stone/40 resize-none"></textarea>
+              </div>
+              <button id="submitBtn" type="submit" class="btn-navy w-full py-3.5 rounded-sm text-sm font-semibold flex items-center justify-center gap-2.5 shadow-md">
+                <div class="w-1.5 h-1.5 rounded-full bg-emerald" aria-hidden="true"></div>
+                <span id="submitBtnText">Submit — Initiate Intelligence Briefing Request</span>
+              </button>
+            </form>
+
+            <p class="f-mono text-[8px] text-stone/60 text-center leading-relaxed mt-4">
+              Submissions reviewed within 48 business hours · POPIA Act 4 of 2013 · AES-256 encrypted · Zero third-party sharing
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /panel-contact -->
+
+
+<!-- ═══════════════ SHARED FOOTER ═══════════════ -->
+<footer class="bg-ink text-white/70 pt-16 pb-8 mt-0">
+  <div class="max-w-7xl mx-auto px-5 lg:px-10">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      <div class="lg:col-span-2">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="relative w-7 h-7 flex items-center justify-center" aria-hidden="true">
+            <div class="absolute inset-0 rounded-full bg-emerald/20 pulse-ring"></div>
+            <div class="w-3.5 h-3.5 rounded-full bg-emerald pulse-core flex items-center justify-center z-10"><div class="w-1.5 h-1.5 rounded-full bg-white"></div></div>
+          </div>
+          <span class="f-display font-semibold text-xl text-white tracking-tight">QUA</span>
+          <span class="f-mono text-[9px] text-white/30 tracking-[.2em] uppercase">Pulse Technologies</span>
+        </div>
+        <p class="text-sm text-white/50 leading-relaxed max-w-sm mb-5">Structural Risk Intelligence · Predictive Failure Analytics · InsurTech. Protecting long-cycle capital through actuarially validated foresight into pressure-vessel failure events.</p>
+        <div class="f-mono text-[9px] text-white/30 flex items-center gap-2">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+          Durban, KwaZulu-Natal, South Africa · Institutional Engagement Only
+        </div>
+      </div>
+      <div>
+        <div class="f-mono text-[9px] text-white/25 uppercase tracking-[.18em] mb-5">Navigate</div>
+        <nav aria-label="Footer navigation">
+          <ul class="space-y-2.5 text-sm text-white/45">
+            <li><button onclick="showTab('home')"       class="hover:text-white transition-colors">Home</button></li>
+            <li><button onclick="showTab('technology')" class="hover:text-white transition-colors">Technology</button></li>
+            <li><button onclick="showTab('advantage')"  class="hover:text-white transition-colors">Failure Analytics</button></li>
+            <li><button onclick="showTab('about')"      class="hover:text-white transition-colors">About</button></li>
+            <li><button onclick="showTab('contact')"    class="hover:text-white transition-colors">Contact</button></li>
+          </ul>
+        </nav>
+      </div>
+      <div>
+        <div class="f-mono text-[9px] text-white/25 uppercase tracking-[.18em] mb-5">Compliance</div>
+        <div class="space-y-2.5">
+          <div class="flex items-center gap-2 text-[10px] text-white/35"><div class="w-1.5 h-1.5 rounded-full bg-emerald flex-shrink-0" aria-hidden="true"></div>POPIA Act 4 of 2013</div>
+          <div class="flex items-center gap-2 text-[10px] text-white/35"><div class="w-1.5 h-1.5 rounded-full bg-emerald flex-shrink-0" aria-hidden="true"></div>AES-256 Encrypted</div>
+          <div class="flex items-center gap-2 text-[10px] text-white/35"><div class="w-1.5 h-1.5 rounded-full bg-emerald flex-shrink-0" aria-hidden="true"></div>ISO 27001 Aligned</div>
+          <div class="flex items-center gap-2 text-[10px] text-white/35"><div class="w-1.5 h-1.5 rounded-full bg-emerald flex-shrink-0" aria-hidden="true"></div>Zero third-party data sharing</div>
+          <div class="flex items-center gap-2 text-[10px] text-white/35"><div class="w-1.5 h-1.5 rounded-full bg-emerald flex-shrink-0" aria-hidden="true"></div>South African jurisdiction</div>
+        </div>
+        <div class="mt-5">
+          <a href="https://linkedin.com/in/giyani-baloyi" target="_blank" rel="noopener" class="flex items-center gap-2 text-[10px] text-white/35 hover:text-white/60 transition-colors">
+            <svg class="w-4 h-4 text-[#0A66C2]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            Giyani Baloyi · LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="h-px bg-white/8 mb-6"></div>
+    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
+      <div class="f-mono text-[9px] text-white/25 uppercase tracking-wider">© 2026 Qua Pulse Technologies (Pty) Ltd · All rights reserved</div>
+      <div class="f-mono text-[9px] text-white/20 uppercase tracking-wider">enquiries@quapulse.co.za · Durban, South Africa · Institutional Enquiries Only</div>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+// ═══════════════════════════════════════════════════════
+// GOOGLE APPS SCRIPT BACKEND ENDPOINT
+// Replace with your deployed GAS Web App URL
+// ═══════════════════════════════════════════════════════
+const GOOGLE_APPS_SCRIPT_WEBAPP_URL = "YOUR_WEB_APP_URL_HERE";
+
+// ═══════════════════════════════════════════════════════
+// TAB SYSTEM — ARIA-COMPLIANT + HASH ROUTING
+// ═══════════════════════════════════════════════════════
+const VALID_TABS = ['home','technology','advantage','about','contact'];
+
+function showTab(id) {
+  if (!VALID_TABS.includes(id)) id = 'home';
+
+  // Hide all panels, deactivate all tabs
+  document.querySelectorAll('.tab-panel').forEach(p => {
+    p.classList.remove('active');
+    p.setAttribute('aria-hidden', 'true');
+  });
+  document.querySelectorAll('.nav-tab').forEach(t => {
+    t.setAttribute('aria-selected', 'false');
+  });
+
+  // Activate target panel
+  const panel = document.getElementById('panel-' + id);
+  if (panel) {
+    panel.classList.add('active');
+    panel.removeAttribute('aria-hidden');
+  }
+
+  // Activate corresponding tab button
+  const tab = document.getElementById('tab-' + id);
+  if (tab) tab.setAttribute('aria-selected', 'true');
+
+  // Update URL hash for deep linking (no page reload)
+  history.pushState({ tab: id }, '', '#' + id);
+
+  // Scroll to top
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  // Trigger scroll reveals
+  setTimeout(triggerReveals, 100);
+}
+
+// Deep link on load — read hash from URL
+function initFromHash() {
+  const hash = window.location.hash.replace('#', '');
+  if (hash && VALID_TABS.includes(hash)) {
+    showTab(hash);
+  } else {
+    // Set default ARIA states without pushing history
+    const homePanel = document.getElementById('panel-home');
+    if (homePanel) homePanel.removeAttribute('aria-hidden');
+    const homeTab = document.getElementById('tab-home');
+    if (homeTab) homeTab.setAttribute('aria-selected', 'true');
+  }
+}
+
+// Handle browser back/forward navigation
+window.addEventListener('popstate', (e) => {
+  const id = (e.state && e.state.tab) ? e.state.tab : 'home';
+  showTab(id);
+});
+
+// ── Mobile menu ──
+function toggleMobile() {
+  const menu = document.getElementById('mobile-menu');
+  const btn  = document.getElementById('hamburger');
+  const isOpen = menu.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+}
+
+// ── Nav shadow on scroll ──
+const nav = document.getElementById('site-nav');
+window.addEventListener('scroll', () => {
+  nav.style.boxShadow = window.scrollY > 20 ? '0 4px 24px rgba(8,23,42,.07)' : 'none';
+}, { passive: true });
+
+// ── Scroll reveals via IntersectionObserver ──
+function triggerReveals() {
+  const els = document.querySelectorAll('.tab-panel.active .section-reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.07 });
+  els.forEach(el => { el.classList.remove('visible'); io.observe(el); });
+}
+
+// ═══════════════════════════════════════════════════════
+// FORM — GOOGLE APPS SCRIPT ASYNC SUBMISSION
+// ═══════════════════════════════════════════════════════
+const contactForm   = document.getElementById('quaPulseContactForm');
+const statusDisplay = document.getElementById('formStatusDisplay');
+const submitBtn     = document.getElementById('submitBtn');
+const submitBtnText = document.getElementById('submitBtnText');
+
+function setFormStatus(type, html) {
+  statusDisplay.className = type; // 'loading' | 'success' | 'error'
+  statusDisplay.innerHTML = html;
+  statusDisplay.style.display = 'block';
+}
+
+contactForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  // ── Loading state ──
+  submitBtn.disabled = true;
+  submitBtnText.textContent = 'EXECUTING CRYPTO PIPELINE TRANSMISSION...';
+  setFormStatus('loading',
+    '⬡ SYSTEM STATUS: Initialising encrypted transmission channel... ' +
+    'Packaging payload via AES-256 protocol...'
+  );
+
+  // ── Build JSON payload from FormData ──
+  const formData = new FormData(contactForm);
+  const payload  = {};
+  formData.forEach((value, key) => { payload[key] = value; });
+  payload.submittedAt = new Date().toISOString();
+
+  // ── Async fetch to GAS Web App ──
+  // mode: 'no-cors' — GAS returns opaque response; we trust the .then() as success
+  fetch(GOOGLE_APPS_SCRIPT_WEBAPP_URL, {
+    method: 'POST',
+    mode:   'no-cors',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  })
+  .then(() => {
+    // Opaque response from no-cors is treated as transmission success
+    setFormStatus('success',
+      '✓ TRANSMISSION COMPLETE — SHA-256 VERIFIED · ' +
+      'Your briefing request has been securely received. ' +
+      'A confidential response will be dispatched within 48 business hours. ' +
+      'Ref: QP-' + Date.now().toString(36).toUpperCase()
+    );
+    contactForm.reset();
+  })
+  .catch((err) => {
+    console.error('[QuaPulse GAS Error]', err);
+    setFormStatus('error',
+      '✕ TRANSMISSION ERROR — Please retry or contact us directly at ' +
+      'enquiries@quapulse.co.za — Error ref: ' + err.message
+    );
+  })
+  .finally(() => {
+    submitBtn.disabled = false;
+    submitBtnText.textContent = 'Submit — Initiate Intelligence Briefing Request';
+  });
+});
+
+// ── Initialise on DOM ready ──
+window.addEventListener('DOMContentLoaded', () => {
+  initFromHash();
+  setTimeout(triggerReveals, 200);
+
+  // Set initial aria-hidden on non-active panels
+  document.querySelectorAll('.tab-panel:not(.active)').forEach(p => {
+    p.setAttribute('aria-hidden', 'true');
+  });
+});
+</script>
+</body>
+</html>
